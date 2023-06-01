@@ -1,36 +1,15 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import phantump from './assets/Phantump.png'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="flex flex-col gap-5">
+    <img :src='phantump' class="h-42 w-42 self-center">
+    <h1>VueMon</h1>
+    <div class="flex self-center gap-5 h-10">
+      <button class="w-36 bg-zinc-700 rounded-3xl">How to play</button>
+      <button class="w-36 bg-white rounded-3xl text-black">Play</button>
+    </div>
+    <h2>Inspired by <a target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></h2>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0;
-}
-</style>
